@@ -1,0 +1,741 @@
+{
+  "@type": "earl:report",
+  "@context": "http://daisy.github.io/ace/ace-report-1.0.jsonld",
+  "dct:title": "Ace Report",
+  "dct:description": "Report on automated accessibility checks for EPUB",
+  "dct:date": "11/7/2024, 11:47:25 PM",
+  "earl:assertedBy": {
+    "@type": "earl:software",
+    "doap:name": "DAISY Ace",
+    "doap:description": "DAISY Accessibility Checker for EPUB",
+    "doap:homepage": "http://daisy.github.io/ace",
+    "doap:created": "2017-07-01",
+    "doap:release": {
+      "doap:revision": "1.3.2"
+    },
+    "doap:shortdesc": "Ace App v1.3.2"
+  },
+  "outlines": {
+    "toc": "<ol xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\t\t\t\t<li>Preface\r\n\t\t\t\t\t<ol>\r\n\t\t\t\t\t\t<li>The Source and Summit</li>\r\n\t\t\t\t\t</ol>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li>Chapter 1\r\n\t\t\t\t\t<ol>\r\n\t\t\t\t\t\t<li>The Eucharist as Sacred Meal</li>\r\n\t\t\t\t\t</ol>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li>Chapter 2\r\n\t\t\t\t\t<ol>\r\n\t\t\t\t\t\t<li>The Eucharist as Sacrifice</li>\r\n\t\t\t\t\t</ol>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li>Chapter 3\r\n\t\t\t\t\t<ol>\r\n\t\t\t\t\t\t<li>“If It’s a Symbol, to Hell with It”</li>\r\n\t\t\t\t\t</ol>\r\n\t\t\t\t</li>\r\n\t\t\t</ol>",
+    "headings": "<ul><ul><li><span class=\"toc-h2\">Contents</span></li></ul></li></ul>",
+    "html": "<ol><li><ol><li><i>Untitled BODY</i></li></ol></li><li><ol><li><i>Untitled BODY</i></li></ol></li><li><ol><li><i>Untitled BODY</i></li></ol></li><li><ol><li><i>Untitled BODY</i></li></ol></li><li><ol><li><i>Untitled BODY</i></li></ol></li><li><ol><li><i>Untitled BODY</i></li></ol></li><li><ol><li><i>Untitled BODY</i></li></ol></li><li><ol><li><i>Untitled BODY</i></li></ol></li><li><ol><li><i>Untitled BODY</i><ol><li>Contents</li></ol></li></ol></li></ol>"
+  },
+  "data": {
+    "images": [
+      {
+        "src": "OEBPS/image/TP_my_body_ePub.png",
+        "alt": "",
+        "role": null,
+        "html": "<img xmlns=\"http://www.w3.org/1999/xhtml\" class=\"_idGenObjectAttribute-1\" src=\"image/TP_my_body_ePub.png\" alt=\"\" />",
+        "location": "my_body_ePub.xhtml#epubcfi(/4%5Bmy_body_ePub%5D/2%5B_idContainer001%5D/2/2)"
+      },
+      {
+        "src": "OEBPS/image/my_body_last_page2.png",
+        "alt": "",
+        "role": null,
+        "html": "<img xmlns=\"http://www.w3.org/1999/xhtml\" class=\"_idGenObjectAttribute-2\" src=\"image/my_body_last_page2.png\" alt=\"\" />",
+        "location": "my_body_ePub-7.xhtml#epubcfi(/4%5Bmy_body_ePub-7%5D/2/2/2/2)"
+      }
+    ]
+  },
+  "properties": {
+    "hasManifestFallbacks": false,
+    "hasBindings": false,
+    "hasSVGContentDocuments": false,
+    "hasFormElements": false,
+    "hasMathML": false,
+    "hasPageBreaks": false
+  },
+  "earl:testSubject": {
+    "url": "_unzipped_EPUB_",
+    "metadata": {
+      "dc:title": "This Is My Body: A Call to Eucharistic Revival",
+      "dc:creator": "Bishop Robert Barron",
+      "dc:date": "2023-02-22T22:51:57Z",
+      "dc:language": "en-US",
+      "dc:identifier": "urn:uuid:a797b497-c1d1-467a-b8e8-feb8788c97a3",
+      "generator": "Adobe InDesign 18.0",
+      "ibooks:specified-fonts": "true",
+      "dcterms:modified": "2023-02-22T16:52:39Z",
+      "Sigil version": "1.2.0"
+    },
+    "links": {}
+  },
+  "a11y-metadata": {
+    "missing": [
+      "schema:accessMode",
+      "schema:accessibilityFeature",
+      "schema:accessibilityHazard",
+      "schema:accessibilitySummary",
+      "schema:accessModeSufficient",
+      "a11y:certifiedBy",
+      "a11y:certifierCredential",
+      "a11y:certifierReport",
+      "dcterms:conformsTo"
+    ],
+    "empty": [],
+    "present": []
+  },
+  "assertions": [
+    {
+      "@type": "earl:assertion",
+      "earl:result": {
+        "earl:outcome": "pass"
+      },
+      "assertions": [],
+      "earl:testSubject": {
+        "url": "/OEBPS/toc.xhtml"
+      }
+    },
+    {
+      "@type": "earl:assertion",
+      "earl:result": {
+        "earl:outcome": "fail"
+      },
+      "assertions": [
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "The language must be specified (xml:lang in OPF package)"
+          },
+          "earl:assertedBy": "Ace",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "epub-lang",
+            "dct:description": "Ensures the OPF XML language is provided",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/epub/language.html",
+              "dct:title": "Language",
+              "dct:description": "Add the missing OPF xml:lang attribute"
+            },
+            "rulesetTags": [
+              "EPUB"
+            ]
+          }
+        },
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "Publications must declare the 'schema:accessMode' metadata"
+          },
+          "earl:assertedBy": "Ace",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "metadata-accessmode",
+            "dct:description": "Ensures a 'schema:accessMode' metadata is present",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html",
+              "dct:title": "Schema.org Accessibility Metadata",
+              "dct:description": "Add a 'schema:accessMode' metadata property to the Package Document"
+            },
+            "rulesetTags": [
+              "EPUB"
+            ]
+          }
+        },
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "Publications must declare the 'schema:accessModeSufficient' metadata"
+          },
+          "earl:assertedBy": "Ace",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "moderate",
+            "dct:title": "metadata-accessmodesufficient",
+            "dct:description": "Ensures a 'schema:accessModeSufficient' metadata is present",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html",
+              "dct:title": "Schema.org Accessibility Metadata",
+              "dct:description": "Add a 'schema:accessModeSufficient' metadata property to the Package Document"
+            },
+            "rulesetTags": [
+              "EPUB"
+            ]
+          }
+        },
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "Publications must declare the 'schema:accessibilityFeature' metadata"
+          },
+          "earl:assertedBy": "Ace",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "metadata-accessibilityfeature",
+            "dct:description": "Ensures a 'schema:accessibilityFeature' metadata is present",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html",
+              "dct:title": "Schema.org Accessibility Metadata",
+              "dct:description": "Add a 'schema:accessibilityFeature' metadata property to the Package Document"
+            },
+            "rulesetTags": [
+              "EPUB"
+            ]
+          }
+        },
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "Publications must declare the 'schema:accessibilityHazard' metadata"
+          },
+          "earl:assertedBy": "Ace",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "metadata-accessibilityhazard",
+            "dct:description": "Ensures a 'schema:accessibilityHazard' metadata is present",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html",
+              "dct:title": "Schema.org Accessibility Metadata",
+              "dct:description": "Add a 'schema:accessibilityHazard' metadata property to the Package Document"
+            },
+            "rulesetTags": [
+              "EPUB"
+            ]
+          }
+        },
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "Publications must declare the 'schema:accessibilitySummary' metadata"
+          },
+          "earl:assertedBy": "Ace",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "moderate",
+            "dct:title": "metadata-accessibilitysummary",
+            "dct:description": "Ensures a 'schema:accessibilitySummary' metadata is present",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/metadata/schema.org/index.html",
+              "dct:title": "Schema.org Accessibility Metadata",
+              "dct:description": "Add a 'schema:accessibilitySummary' metadata property to the Package Document"
+            },
+            "rulesetTags": [
+              "EPUB"
+            ]
+          }
+        }
+      ],
+      "earl:testSubject": {
+        "url": "OEBPS/content.opf",
+        "dct:title": "This Is My Body: A Call to Eucharistic Revival"
+      }
+    },
+    {
+      "@type": "earl:assertion",
+      "earl:result": {
+        "earl:outcome": "fail"
+      },
+      "assertions": [
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "The <html> element does not have a lang attribute",
+            "earl:pointer": {
+              "cfi": [
+                "/"
+              ],
+              "css": [
+                "html"
+              ]
+            },
+            "html": "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:epub=\"http://www.idpf.org/2007/ops\">"
+          },
+          "earl:assertedBy": "aXe",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "html-has-lang",
+            "dct:description": "Ensures every HTML document has a lang attribute",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/html/lang.html",
+              "dct:title": "Language",
+              "dct:description": "<html> element must have a lang attribute"
+            },
+            "rulesetTags": [
+              "cat.language",
+              "wcag2a",
+              "wcag311",
+              "ACT",
+              "TTv5",
+              "TT11.a"
+            ]
+          }
+        }
+      ],
+      "earl:testSubject": {
+        "url": "my_body_ePub.xhtml",
+        "dct:title": "my_body_ePub"
+      }
+    },
+    {
+      "@type": "earl:assertion",
+      "earl:result": {
+        "earl:outcome": "fail"
+      },
+      "assertions": [
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "The <html> element does not have a lang attribute",
+            "earl:pointer": {
+              "cfi": [
+                "/"
+              ],
+              "css": [
+                "html"
+              ]
+            },
+            "html": "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:epub=\"http://www.idpf.org/2007/ops\">"
+          },
+          "earl:assertedBy": "aXe",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "html-has-lang",
+            "dct:description": "Ensures every HTML document has a lang attribute",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/html/lang.html",
+              "dct:title": "Language",
+              "dct:description": "<html> element must have a lang attribute"
+            },
+            "rulesetTags": [
+              "cat.language",
+              "wcag2a",
+              "wcag311",
+              "ACT",
+              "TTv5",
+              "TT11.a"
+            ]
+          }
+        }
+      ],
+      "earl:testSubject": {
+        "url": "my_body_ePub-1.xhtml",
+        "dct:title": "my_body_ePub-1"
+      }
+    },
+    {
+      "@type": "earl:assertion",
+      "earl:result": {
+        "earl:outcome": "fail"
+      },
+      "assertions": [
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "The <html> element does not have a lang attribute",
+            "earl:pointer": {
+              "cfi": [
+                "/"
+              ],
+              "css": [
+                "html"
+              ]
+            },
+            "html": "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:epub=\"http://www.idpf.org/2007/ops\">"
+          },
+          "earl:assertedBy": "aXe",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "html-has-lang",
+            "dct:description": "Ensures every HTML document has a lang attribute",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/html/lang.html",
+              "dct:title": "Language",
+              "dct:description": "<html> element must have a lang attribute"
+            },
+            "rulesetTags": [
+              "cat.language",
+              "wcag2a",
+              "wcag311",
+              "ACT",
+              "TTv5",
+              "TT11.a"
+            ]
+          }
+        }
+      ],
+      "earl:testSubject": {
+        "url": "my_body_ePub-2.xhtml",
+        "dct:title": "my_body_ePub-2"
+      }
+    },
+    {
+      "@type": "earl:assertion",
+      "earl:result": {
+        "earl:outcome": "fail"
+      },
+      "assertions": [
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "The <html> element does not have a lang attribute",
+            "earl:pointer": {
+              "cfi": [
+                "/"
+              ],
+              "css": [
+                "html"
+              ]
+            },
+            "html": "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:epub=\"http://www.idpf.org/2007/ops\">"
+          },
+          "earl:assertedBy": "aXe",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "html-has-lang",
+            "dct:description": "Ensures every HTML document has a lang attribute",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/html/lang.html",
+              "dct:title": "Language",
+              "dct:description": "<html> element must have a lang attribute"
+            },
+            "rulesetTags": [
+              "cat.language",
+              "wcag2a",
+              "wcag311",
+              "ACT",
+              "TTv5",
+              "TT11.a"
+            ]
+          }
+        }
+      ],
+      "earl:testSubject": {
+        "url": "my_body_ePub-3.xhtml",
+        "dct:title": "my_body_ePub-3"
+      }
+    },
+    {
+      "@type": "earl:assertion",
+      "earl:result": {
+        "earl:outcome": "fail"
+      },
+      "assertions": [
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "The <html> element does not have a lang attribute",
+            "earl:pointer": {
+              "cfi": [
+                "/"
+              ],
+              "css": [
+                "html"
+              ]
+            },
+            "html": "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:epub=\"http://www.idpf.org/2007/ops\">"
+          },
+          "earl:assertedBy": "aXe",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "html-has-lang",
+            "dct:description": "Ensures every HTML document has a lang attribute",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/html/lang.html",
+              "dct:title": "Language",
+              "dct:description": "<html> element must have a lang attribute"
+            },
+            "rulesetTags": [
+              "cat.language",
+              "wcag2a",
+              "wcag311",
+              "ACT",
+              "TTv5",
+              "TT11.a"
+            ]
+          }
+        }
+      ],
+      "earl:testSubject": {
+        "url": "my_body_ePub-4.xhtml",
+        "dct:title": "my_body_ePub-4"
+      }
+    },
+    {
+      "@type": "earl:assertion",
+      "earl:result": {
+        "earl:outcome": "fail"
+      },
+      "assertions": [
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "The <html> element does not have a lang attribute",
+            "earl:pointer": {
+              "cfi": [
+                "/"
+              ],
+              "css": [
+                "html"
+              ]
+            },
+            "html": "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:epub=\"http://www.idpf.org/2007/ops\">"
+          },
+          "earl:assertedBy": "aXe",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "html-has-lang",
+            "dct:description": "Ensures every HTML document has a lang attribute",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/html/lang.html",
+              "dct:title": "Language",
+              "dct:description": "<html> element must have a lang attribute"
+            },
+            "rulesetTags": [
+              "cat.language",
+              "wcag2a",
+              "wcag311",
+              "ACT",
+              "TTv5",
+              "TT11.a"
+            ]
+          }
+        }
+      ],
+      "earl:testSubject": {
+        "url": "my_body_ePub-5.xhtml",
+        "dct:title": "my_body_ePub-5"
+      }
+    },
+    {
+      "@type": "earl:assertion",
+      "earl:result": {
+        "earl:outcome": "fail"
+      },
+      "assertions": [
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "The <html> element does not have a lang attribute",
+            "earl:pointer": {
+              "cfi": [
+                "/"
+              ],
+              "css": [
+                "html"
+              ]
+            },
+            "html": "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:epub=\"http://www.idpf.org/2007/ops\">"
+          },
+          "earl:assertedBy": "aXe",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "html-has-lang",
+            "dct:description": "Ensures every HTML document has a lang attribute",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/html/lang.html",
+              "dct:title": "Language",
+              "dct:description": "<html> element must have a lang attribute"
+            },
+            "rulesetTags": [
+              "cat.language",
+              "wcag2a",
+              "wcag311",
+              "ACT",
+              "TTv5",
+              "TT11.a"
+            ]
+          }
+        }
+      ],
+      "earl:testSubject": {
+        "url": "my_body_ePub-6.xhtml",
+        "dct:title": "my_body_ePub-6"
+      }
+    },
+    {
+      "@type": "earl:assertion",
+      "earl:result": {
+        "earl:outcome": "fail"
+      },
+      "assertions": [
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "The <html> element does not have a lang attribute",
+            "earl:pointer": {
+              "cfi": [
+                "/"
+              ],
+              "css": [
+                "html"
+              ]
+            },
+            "html": "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:epub=\"http://www.idpf.org/2007/ops\">"
+          },
+          "earl:assertedBy": "aXe",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "html-has-lang",
+            "dct:description": "Ensures every HTML document has a lang attribute",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/html/lang.html",
+              "dct:title": "Language",
+              "dct:description": "<html> element must have a lang attribute"
+            },
+            "rulesetTags": [
+              "cat.language",
+              "wcag2a",
+              "wcag311",
+              "ACT",
+              "TTv5",
+              "TT11.a"
+            ]
+          }
+        },
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "Element is in tab order and does not have accessible text\nElement does not have text that is visible to screen readers\naria-label attribute does not exist or is empty\naria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\nElement has no title attribute",
+            "earl:pointer": {
+              "cfi": [
+                "/4[my_body_ePub-7]/2/2/2"
+              ],
+              "css": [
+                "a"
+              ]
+            },
+            "html": "<a xmlns=\"http://www.w3.org/1999/xhtml\" href=\"http://wordonfire.org/Eucharist\"><img class=\"_idGenObjectAttribute-2\" src=\"image/my_body_last_page2.png\" alt=\"\" /></a>"
+          },
+          "earl:assertedBy": "aXe",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "link-name",
+            "dct:description": "Ensures links have discernible text",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/html/links.html",
+              "dct:title": "Links",
+              "dct:description": "Links must have discernible text"
+            },
+            "rulesetTags": [
+              "cat.name-role-value",
+              "wcag2a",
+              "wcag412",
+              "wcag244",
+              "section508",
+              "section508.22.a",
+              "ACT",
+              "TTv5",
+              "TT6.a"
+            ]
+          }
+        }
+      ],
+      "earl:testSubject": {
+        "url": "my_body_ePub-7.xhtml",
+        "dct:title": "my_body_ePub-7"
+      }
+    },
+    {
+      "@type": "earl:assertion",
+      "earl:result": {
+        "earl:outcome": "fail"
+      },
+      "assertions": [
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "Element has no ARIA role matching its epub:type",
+            "earl:pointer": {
+              "cfi": [
+                "/4/2[toc]"
+              ],
+              "css": [
+                "#toc"
+              ]
+            },
+            "html": "<nav xmlns=\"http://www.w3.org/1999/xhtml\" id=\"toc\" xmlns:epub=\"http://www.idpf.org/2007/ops\" epub:type=\"toc\">"
+          },
+          "earl:assertedBy": "aXe",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "minor",
+            "dct:title": "epub-type-has-matching-role",
+            "dct:description": "Ensure the element has an ARIA role matching its epub:type",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/html/roles.html",
+              "dct:title": "ARIA role",
+              "dct:description": "ARIA role should be used in addition to epub:type"
+            },
+            "rulesetTags": [
+              "best-practice",
+              "cat.aria"
+            ]
+          }
+        },
+        {
+          "@type": "earl:assertion",
+          "earl:result": {
+            "earl:outcome": "fail",
+            "dct:description": "The <html> element does not have a lang attribute",
+            "earl:pointer": {
+              "cfi": [
+                "/"
+              ],
+              "css": [
+                "html"
+              ]
+            },
+            "html": "<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:epub=\"http://www.idpf.org/2007/ops\">"
+          },
+          "earl:assertedBy": "aXe",
+          "earl:mode": "automatic",
+          "earl:test": {
+            "earl:impact": "serious",
+            "dct:title": "html-has-lang",
+            "dct:description": "Ensures every HTML document has a lang attribute",
+            "help": {
+              "url": "http://kb.daisy.org/publishing/docs/html/lang.html",
+              "dct:title": "Language",
+              "dct:description": "<html> element must have a lang attribute"
+            },
+            "rulesetTags": [
+              "cat.language",
+              "wcag2a",
+              "wcag311",
+              "ACT",
+              "TTv5",
+              "TT11.a"
+            ]
+          }
+        }
+      ],
+      "earl:testSubject": {
+        "url": "toc.xhtml",
+        "dct:title": "This Is My Body: A Call to Eucharistic Revival"
+      }
+    }
+  ],
+  "earl:result": {
+    "earl:outcome": "fail"
+  }
+}
